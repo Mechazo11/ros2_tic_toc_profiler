@@ -19,7 +19,7 @@
 #include <boost/foreach.hpp>
 #include <sys/time.h>
 
-#include "ros2_tictoc_profiler/msg/profiler_entry.h" //* Following this example https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.html#use-an-interface-from-the-same-package
+#include "ros2_tictoc_profiler/msg/profiler_entry.hpp" // Following this example https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Single-Package-Define-And-Use-Interface.html#use-an-interface-from-the-same-package
 
 namespace ca
 {

@@ -33,11 +33,10 @@ set(msg_files
 )
 
 # https://github.com/NMBURobotics/ros2_python_demos/blob/main/ros2_demo_custom_msgs/CMakeLists.txt
+# This line essentially generates the custom messages to be usable within both this package and any internal libraries
 rosidl_generate_interfaces(${PROJECT_NAME}
   # path to each custom message is added one per line
   ${msg_files}
-  DEPENDENCIES 
-  std_msgs 
 )
 
 # Header file locations [C++ node]
@@ -48,7 +47,11 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
 )
 
 # tictoc_profiler is a library within this package
-add_library(tictoc_profiler SHARED
+# add_library(tictoc_profiler SHARED
+#   src/profiler.cpp
+# )
+
+add_library(tictoc_profiler
   src/profiler.cpp
 )
 
@@ -56,6 +59,10 @@ add_library(tictoc_profiler SHARED
 ament_target_dependencies(tictoc_profiler
   ${THIS_PACKAGE_INCLUDE_DEPENDS}
 )
+
+# https://robotics.stackexchange.com/questions/23171/creating-a-custom-msg-in-ros2
+rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} "rosidl_typesupport_cpp")
+target_link_libraries(tictoc_profiler "${cpp_typesupport_target}")
 
 # Link boost with tictoc_oprofiler
 target_link_libraries(tictoc_profiler
