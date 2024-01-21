@@ -9,6 +9,8 @@
  * ROS 2 port created by
  * @author Azmyin Md. Kamal
  * @year 2024 (9 friggin years later!!!)
+ * 
+ * Library-only, does not contain an example node
  **@=*/
 
 

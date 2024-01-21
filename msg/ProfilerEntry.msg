@@ -1,3 +1,4 @@
+# message definitions
 uint32 seq
 string name
 int64 start_time
