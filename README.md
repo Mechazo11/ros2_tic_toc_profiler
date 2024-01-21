@@ -1,5 +1,7 @@
 # ROS2 Tictoc Profiler
 
+This package is a ROS2 library-only port of Dr. Daniel Maturana's ROS1 **tictoc_profiler** package. Used by Dr. Yang's [CubeSLAM](https://github.com/shichaoy/cube_slam) project and Benchun Zhou's point-plane-object SLAM [point-plane-object-SLAM](https://github.com/benchun123/point-plane-object-SLAM). A sample usecase can be seen here [TODO, add after uploading ros2_monocular_object_detection]
+
 ---
 Author: Azmyin Md. Kamal
 
@@ -8,7 +10,7 @@ Ph.D. student, [iCORE Lab](https://icorelab.github.io/), Department of MIE, Loui
 Date: 01/18/2024
 ***
 
-This package is a ROS2 library-only port of Dr. Daniel Maturana's ROS1 **tictoc_profiler** package. Used by Dr. Yang's [CubeSLAM](https://github.com/shichaoy/cube_slam) project and Benchun Zhou's point-plane-object SLAM [point-plane-object-SLAM](https://github.com/benchun123/point-plane-object-SLAM). A sample usecase can be seen here [TODO, add after uploading ros2_monocular_object_detection]
+
 
 ## 0. Tested with
 1. Boost 1.74 and Boost 1.84
