@@ -40,7 +40,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 )
 
 # Header file locations [C++ node]
-include_directories(include) # Add .hpp, .h files from include/ros2_orb_slam3
+include_directories(include) # Add .hpp, .h files from include/package_name/
 
 set(THIS_PACKAGE_INCLUDE_DEPENDS
   rclcpp
@@ -51,7 +51,7 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
 #   src/profiler.cpp
 # )
 
-add_library(tictoc_profiler
+add_library(tictoc_profiler SHARED
   src/profiler.cpp
 )
 
@@ -66,11 +66,10 @@ target_link_libraries(tictoc_profiler "${cpp_typesupport_target}")
 
 # Link boost with tictoc_oprofiler
 target_link_libraries(tictoc_profiler
-    ${Boost_LIBRARIES}
+  -lboost_system
+  -lboost_chrono
 )
 
-ament_export_libraries(tictoc_profiler)
-ament_export_include_directories(tictoc_profiler) # Tell downstream packages where to find the headers
 
 # Install all the header files in package/package/include
 install (DIRECTORY include/ 
@@ -84,5 +83,9 @@ install(
   ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin
 )
+
+ament_export_libraries(tictoc_profiler)
+ament_export_include_directories(include) # Tell downstream packages where to find the headers
+
 
 ament_package()

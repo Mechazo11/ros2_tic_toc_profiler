@@ -4,7 +4,7 @@
   <name>ros2_tictoc_profiler</name>
   <version>1.0.0</version>
   <description>ROS2 port of tictoc_profiler by Daniel Maturana</description>
-  <maintainer email="azmyin12@gmail.com">Azmyin</maintainer>
+  <maintainer email="azmyin12@gmail.com">Azmyin Md. Kamal</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
