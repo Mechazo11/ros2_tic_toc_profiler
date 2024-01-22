@@ -1,14 +1,12 @@
 # ROS2 Tictoc Profiler
 
-This package is a ROS2 library-only port of Dr. Daniel Maturana's ROS1 **tictoc_profiler** package. Used by Dr. Yang's [CubeSLAM](https://github.com/shichaoy/cube_slam) project and Benchun Zhou's point-plane-object SLAM [point-plane-object-SLAM](https://github.com/benchun123/point-plane-object-SLAM). A sample usecase can be seen here [TODO, add after uploading ros2_monocular_object_detection]
+This package is a ROS2 library-only port of Dr. Daniel Maturana's ROS1 **tictoc_profiler** package. Used by Dr. Yang's [CubeSLAM](https://github.com/shichaoy/cube_slam) project and Benchun Zhou's point-plane-object SLAM [point-plane-object-SLAM](https://github.com/benchun123/point-plane-object-SLAM). For a practical usecase, look into [sun_rgbd_driver.cpp](https://github.com/Mechazo11/ros2_monocular_object_detection/blob/main/src/sun_rgbd_driver.cpp) and [sun_rgbd_example_class.cpp](https://github.com/Mechazo11/ros2_monocular_object_detection/blob/main/src/sun_rgbd_example_class.cpp) from the [ros2_monocular_object_detection](https://github.com/Mechazo11/ros2_monocular_object_detection.git) pacakge
 
 @author: Azmyin Md. Kamal
 
 @job: Ph.D. student, [iCORE Lab](https://icorelab.github.io/), Department of MIE, Louisiana State University, Louisiana, USA
 
 @date: 01/18/2024
-
-
 
 ## 0. Tested with
 1. Boost 1.74 and Boost 1.84
@@ -41,5 +39,5 @@ find_package(ros2_tictoc_profiler REQUIRED) # ROS 2 library only package, port o
 <build_depend>ros2_tictoc_profiler</build_depend>
 <exec_depend>ros2_tictoc_profiler</exec_depend>
 ```
-* Follow usecase example as linked in the above example
+* Follow the useage example linked from the ros_monocular_object_detection package
 
